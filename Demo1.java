@@ -1,18 +1,25 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.LinkedList;
 
-public class Demo1 {
+public class Demo1{
     public static void main(String[] args) {
-        Deque<Integer> myDeque = new ArrayDeque<>();
-        myDeque.push(10);           // push = offerFirst
-        myDeque.offer(20);          // offer = offerLast
-        myDeque.offer(30);  
-        myDeque.push(40);
-        myDeque.offerFirst(50);
-        myDeque.offerLast(60);
-        System.out.println(myDeque);  // [60, 30, 20, 10, 40, 50] // prints reverce [50, 40, 10, 20, 30, 60] 
-        myDeque.pop();                // pop = popFirst
-        myDeque.poll();               // poll = pollFirst
-        System.out.println(myDeque);  // [60, 30, 20, 10] // prints reverse [10, 20, 30, 60]
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+        System.out.println(list);
+        System.out.println(list.size());
+        System.out.println(list.contains(30));
+        System.out.println(list.contains(100));
+        System.out.println(list.indexOf(40));
+        System.out.println(list.lastIndexOf(30));
+        System.out.println(list.remove(2));
+        System.out.println(list);
+        list.add(1, 20);
+        System.out.println(list);
+
+        
     }
 }
